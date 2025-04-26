@@ -1,0 +1,33 @@
+services:
+    caddy:
+        container_name: caddy
+        image: caddy:2
+        networks:
+            - bsky-pds
+        ports:
+            - "80:80"
+            - "443:443"
+            - "443:443/udp"
+        depends_on:
+            - pds
+        restart: unless-stopped
+        volumes:
+            - ./caddy/data:/data
+            - ./caddy/etc/caddy:/etc/caddy
+        env_file:
+            - ./pds.env
+
+    pds:
+        container_name: pds
+        image: ghcr.io/bluesky-social/pds:0.4
+        restart: unless-stopped
+        networks:
+            - bsky-pds
+        volumes:
+            - ./:/pds
+        env_file:
+            - ./pds.env
+
+networks:
+    bsky-pds:
+        external: false

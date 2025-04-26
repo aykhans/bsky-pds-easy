@@ -1,0 +1,12 @@
+{
+    on_demand_tls {
+        ask http://pds:3000/tls-check
+    }
+}
+
+*.{$PDS_HOSTNAME}, {$PDS_HOSTNAME} {
+    tls {
+        on_demand
+    }
+    reverse_proxy http://pds:3000
+}
