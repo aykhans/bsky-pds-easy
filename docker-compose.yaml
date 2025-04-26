@@ -12,8 +12,8 @@ services:
             - pds
         restart: unless-stopped
         volumes:
-            - ./caddy/data:/data
-            - ./caddy/etc/caddy:/etc/caddy
+            - ./data/caddy/data:/data
+            - ./data/caddy/etc/caddy:/etc/caddy
         env_file:
             - ./pds.env
 
@@ -24,7 +24,7 @@ services:
         networks:
             - bsky-pds
         volumes:
-            - ./:/pds
+            - ./data:/pds
         env_file:
             - ./pds.env
 
