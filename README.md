@@ -1,8 +1,7 @@
 # Bluesky PDS Easy Deployment
 
-This repository provides a step-by-step guide for deploying the Bluesky Personal Data Server (PDS) on a Linux system.
-It is similar to [bluesky-social/pds](https://github.com/bluesky-social/pds), but uses only Docker to run the services.
-Unlike the `installer.sh` script in the [bluesky-social/pds](https://github.com/bluesky-social/pds) repository, this setup relies solely on the commands provided below, making the deployment process simpler and more straightforward.
+This repository provides a step-by-step guide for deploying the Bluesky Personal Data Server (PDS) on a Linux system.  
+It is similar to [bluesky-social/pds](https://github.com/bluesky-social/pds), but it only uses Docker to run services, making the deployment process simpler and more straightforward compared to the `installer.sh` script in the original repository.
 
 ## Prerequisites
 
