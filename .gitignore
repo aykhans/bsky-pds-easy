@@ -1,3 +1,5 @@
 *.sqlite
 *.sqlite-*
 pds.env
+data/actors/
+data/caddy/data/
